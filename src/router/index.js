@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Layout from '../views/Layout.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import PlayerList from '../views/PlayerList.vue'
 import Registration from '../views/Registration.vue'
 import RegistrationSuccess from '../views/RegistrationSuccess.vue'
 
@@ -29,6 +30,12 @@ const routes = [
           path: 'contact',
           name: 'Contact',
           component: Contact
+        },
+
+        {
+          path: 'player-list',
+          name: 'PlayerList',
+          component: PlayerList
         },
       
         {

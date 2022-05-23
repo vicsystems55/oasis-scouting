@@ -1,7 +1,7 @@
 <template >
   <div>
       <!-- section-hero-posts-->
-      <div class="hero-header">
+      <div class="hero-header d-none">
           <!-- Hero Slider-->
           <div id="hero-slider" class="hero-slider">
 
@@ -22,7 +22,7 @@
               <!-- End Item Slide-->
 
               <!-- Item Slide-->
-              <div class="item-slider" style="background:url(img/slide/2.jpg);">
+              <div class="item-slider d-none" style="background:url(img/slide/2.jpg);">
                   <div class="container">
                       <div class="row align-items-center">
                           <div class="col-lg-7">
@@ -38,7 +38,7 @@
               <!-- End Item Slide-->
 
               <!-- Item Slide-->
-              <div class="item-slider" style="background:url(img/slide/1.jpg);">
+              <div class="item-slider d-none" style="background:url(img/slide/1.jpg);">
                   <div class="container">
                       <div class="row align-items-center">
                           <div class="col-lg-7">
@@ -56,6 +56,51 @@
           </div>
           <!-- End Hero Slider-->
       </div>
+
+                  <div class="hero-header hero-bg" style="background:url(img/slide/3.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 no-margin">
+                            <h1>The Next Greatest of All Times</h1>
+                        </div>
+                        <div class="col-lg-12 d">
+                            <div class="box-start">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4">
+                                        
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="horizontal-next-teams">
+                                            <div class="row align-items-center">
+                                                <div class="col d-none">
+                                                    <a href="single-team.html">
+                                                        <img src="img/clubs-logos/colombia.png" alt="">
+                                                        <span>Colombia</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <strong>Picking the best of the best.</strong>
+                                                </div>
+                                                <div class="col d-none">
+                                                    <a href="single-team.html">
+                                                        <img src="img/clubs-logos/rusia.png" alt="">
+                                                        <span>Rusia</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="horizontal-next-counter">
+                                            <div id="event-one" class="counter"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
       <!-- End section-hero-posts-->
 
       <!-- Section Area - Content Central -->
