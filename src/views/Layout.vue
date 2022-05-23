@@ -5,9 +5,9 @@
                 <!-- End headerbox-->
                 <div class="headerbox">
                     <div class="container">
-                        <div class="row justify-content-between align-items-center">
+                        <div class="row justify-content-between align-items-center bg-primary">
                             <!-- Logo-->
-                            <div class="col">
+                            <div class="col ">
                                <div class="logo">
                                    <a href="index.html" title="Return Home">
                                         <img src="img/logo.png" alt="Logo" class="logo_img">
@@ -108,7 +108,7 @@
                     <!-- Logo Footer-->
                    <div class="col-lg-12">
                         <div class="logo-footer">
-                            <h2>Sports Cup</h2>
+                            <h2>Oasis Football Scouting</h2>
                         </div>
                    </div>
                     <!-- End Logo Footer-->
@@ -136,13 +136,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li>
-                            <div>
-                                <a href="#" class="google-plus">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </div>
-                        </li>
+                        
                         <li>
                             <div>
                                 <a href="#" class="youtube">
