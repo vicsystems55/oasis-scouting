@@ -1,13 +1,13 @@
 <template>
         <div id="layout">
             <!-- Header-->
-            <header>
+            <header class="header-3">
                 <!-- End headerbox-->
                 <div class="headerbox">
                     <div class="container">
-                        <div class="row justify-content-between align-items-center bg-primary">
+                        <div class="row justify-content-between align-items-center ">
                             <!-- Logo-->
-                            <div class="col ">
+                            <div class="col col col-xl-12 text-center">
                                <div class="logo">
                                    <a href="index.html" title="Return Home">
                                         <img src="img/logo.png" alt="Logo" class="logo_img">
@@ -28,47 +28,49 @@
                         </div>
                     </div>
                 </div>
+
+                <nav class="mainmenu ">
+                    <div class="container ">
+                        <!-- Menu-->
+                        <ul class="sf-menu" id="menu">
+
+                            <li class="current">
+
+                                <router-link to="/">Home</router-link>
+                            
+                            </li>
+
+                            <li>
+
+                                <router-link to="/about">About</router-link>
+                            
+                            </li>
+
+                            <li class="current">
+
+                                <router-link to="/contact">Contact</router-link>
+                                
+                            </li>
+
+                            <li class="current">
+
+                                <router-link to="/registration">Registration</router-link>
+                                
+                            </li>
+
+                            
+
+                            
+                        </ul>
+                        <!-- End Menu-->
+                    </div>
+                </nav>
                 <!-- End headerbox-->
             </header>
             <!-- End Header-->
 
             <!-- mainmenu-->
-            <nav class="mainmenu">
-                <div class="container">
-                    <!-- Menu-->
-                    <ul class="sf-menu" id="menu">
-
-                        <li class="current">
-
-                            <router-link to="/">Home</router-link>
-                          
-                        </li>
-
-                        <li>
-
-                            <router-link to="/about">About</router-link>
-                          
-                        </li>
-
-                        <li class="current">
-
-                            <router-link to="/contact">Contact</router-link>
-                            
-                        </li>
-
-                        <li class="current">
-
-                            <router-link to="/registration">Registration</router-link>
-                            
-                        </li>
-
-                        
-
-                        
-                    </ul>
-                    <!-- End Menu-->
-                </div>
-            </nav>
+     
             <!-- End mainmenu-->
 
             <!-- Mobile Nav-->
