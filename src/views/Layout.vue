@@ -175,21 +175,7 @@
                             <!-- End Column Links -->
 
                             <!-- Column Links -->
-                            <div class="col-lg-4 col-md-7 col-sm-7">
-                                <div class="info-links">
-                                   <h5>Groups</h5>
-                                    <ul class="columns">
-                                        <li><a href="#">GROUP A</a></li>
-                                        <li><a href="#">GROUP B</a></li>
-                                        <li><a href="#">GROUP C</a></li>
-                                        <li><a href="#">GROUP D</a></li>
-                                        <li><a href="#">GROUP E</a></li>
-                                        <li><a href="#">GROUP F</a></li>
-                                        <li><a href="#">GROUP G</a></li>
-                                        <li><a href="#">GROUP H</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                             <!-- End Column Links -->
 
                             <!-- Column Links -->
@@ -215,10 +201,7 @@
                                         <li><a href="#">SAINT PETERSBURG</a></li>
                                         <li><a href="#">EKATERINBURG</a></li>
                                         <li><a href="#">MOSCOW</a></li>
-                                        <li><a href="#">KAZAN</a></li>
-                                        <li><a href="#">KALININGRAD</a></li>
-                                        <li><a href="#">VOLGOGRAD</a></li>
-                                        <li><a href="#">ROSTOV-ON-DON</a></li>
+                                     
                                     </ul>
                                 </div>
                             </div>
@@ -235,7 +218,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>&copy; 2018 SportsCup . All Rights Reserved</p>
+                                <p>&copy; 2022 vicSystems . All Rights Reserved</p>
                             </div>
                         </div>
                     </div>
