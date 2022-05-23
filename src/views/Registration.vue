@@ -12,7 +12,7 @@
                                 <div class="info-panel">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <p class="lead ">Complete form below and proceed to payment of N 1,000.00 to compelet application</p>
+                                            <p class="lead ">Complete form below and proceed to payment of N 1,000.00 to complete application</p>
                                         </div>
                                     </div>
 
