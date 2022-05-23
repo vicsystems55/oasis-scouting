@@ -255,7 +255,7 @@ export default {
   data() {
     return{
         publicKey:'pk_test_a597f2692e20038b6ec420cf207bb552a5389454',
-        amount:1000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
+        amount:100000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
         email:'somteacodes@gmail.com',
         firstname:'Somtea', //optional field remember to pass as a prop of firstname if needed
         lastname:'Codes' //optional field remember to pass as a prop of lastname if needed
