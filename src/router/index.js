@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Layout from '../views/Layout.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import Error404 from '../views/404.vue'
 import PlayerList from '../views/PlayerList.vue'
 import Registration from '../views/Registration.vue'
 import RegistrationSuccess from '../views/RegistrationSuccess.vue'
@@ -49,6 +50,13 @@ const routes = [
           name: 'RegistrationSuccess',
           component: RegistrationSuccess
         },
+
+        {
+          path: '/:pathMatch(.*)*',
+          name: 'error-404',
+          component: Error404
+        },
+
       ]
   },
 
