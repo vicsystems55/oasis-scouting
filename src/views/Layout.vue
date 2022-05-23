@@ -40,25 +40,25 @@
 
                         <li class="current">
 
-                            <a href="/">Home</a>
+                            <router-link to="/">Home</router-link>
                           
                         </li>
 
                         <li>
 
-                            <a href="/about">About</a>
+                            <router-link to="/about">About</router-link>
                           
                         </li>
 
                         <li class="current">
 
-                            <a href="/contact">Contact</a>
+                            <router-link to="/contact">Contact</router-link>
                             
                         </li>
 
                         <li class="current">
 
-                            <a href="/registration">Registration</a>
+                            <router-link to="/registration">Registration</router-link>
                             
                         </li>
 
@@ -78,18 +78,18 @@
                    
 
                     <li>
-                        <a href="/">Home</a>
+                        <router-link to="/">Home</router-link>
                     </li>
 
                     <li>
-                        <a href="/about">About</a>
+                        <router-link to="/about">About</router-link>
                     </li>
                                         <li>
-                        <a href="/contact">Contact</a>
+                        <router-link to="/contact">Contact</router-link>
                     </li>
 
                     <li>
-                        <a href="/registration">Registration</a>
+                        <router-link to="/registration">Registration</router-link>
                     </li>
 
                    
