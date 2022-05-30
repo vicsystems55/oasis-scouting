@@ -6,6 +6,8 @@ import Contact from '../views/Contact.vue'
 import Error404 from '../views/404.vue'
 import PlayerList from '../views/PlayerList.vue'
 import Registration from '../views/Registration.vue'
+import EmailVerification from '../views/EmailVerification.vue'
+import Profile from '../views/Profile.vue'
 import RegistrationSuccess from '../views/RegistrationSuccess.vue'
 
 const routes = [
@@ -43,6 +45,19 @@ const routes = [
           path: 'registration',
           name: 'Registration',
           component: Registration
+        },
+
+        {
+          path: 'email-verification',
+          name: 'EmailVerification',
+          component: EmailVerification
+        },
+
+
+        {
+          path: 'profile',
+          name: 'Profile',
+          component: Profile
         },
       
         {

@@ -6,45 +6,27 @@
                             <!-- Content Text-->
                             <div class="panel-box block-form">
                                 <div class="titles text-center">
-                                    <h4>Start Application.</h4>
+                                    <h4>Verify Email</h4>
 
-                                    <h4>Step 1/3</h4>
+                                        <h4>Step 2/3</h4>
                                 </div>
 
                                 <div class="info-panel col-md-9 mx-auto">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <p class="lead ">Complete your application by filling the form below then proceed with your payment of N 5,000.00 registration fee.</p>
+                                            <p class="lead ">An email confirmation code has been sent to you. Supply the code to continue</p>
                                         </div>
                                     </div>
 
-                                    <div class="form-horizontal form-theme padding-top-mini">
+                                    <form class=" form-theme padding-top-mini">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-2">Fullname</label>
-                                            <div class="col-sm-10">
-                                                <input type="text"  v-model="xname" class="form-control" placeholder="Type your name" y="">
+                                            <label class="text-center col-sm-12 mx-auto">OTP</label>
+                                            <div class="col-sm-6 mx-auto">
+                                                <input type="text"  v-model="otp" class="form-control text-center" placeholder="Enter OTP" y="">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2">Email</label>
-                                            <div class="col-sm-10">
-                                                <input type="text"  v-model="xemail" class="form-control" placeholder="Type your email" y="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2">Phone</label>
-                                            <div class="col-sm-10">
-                                                <input type="text"  v-model="xphone" class="form-control" placeholder="Type your phone number" y="">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group d-flex justify-content-end">
-
-                                                <button v-if="loading"  class="btn btn-primary float-right" disabled> Processing... </button>
-                                            
-                                                <button  v-else @click="register()" class="btn btn-primary float-right"> Next Step </button>
-                                            
-                                        </div>
+                                        
+                                        
 
                                         <div class="form-group d-none">
                                             <div class="offset-sm-2 col-sm-10">
@@ -64,8 +46,18 @@
                                        
                                         
                                         
+                                        <div class="form-group d-flex justify-content-center">
+                                           
+                                            <button v-if="loading"  class="btn btn-primary float-right" disabled> Verifying...</button>
 
-                                    </div>
+                                                <button v-else @click="verifyEmail()" class="btn btn-primary float-right"> Submit and proceed</button>
+                                            
+                                        </div>
+
+
+
+
+                                    </form>
                                 </div>
 
                             </div>
@@ -73,7 +65,7 @@
                         </div>
 
                         <!-- Newsletter -->
-                        <div class="section-newsletter d-none">
+                        <div class="section-newsletter">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -113,11 +105,11 @@
                     </section>
                     <!-- End Section Area -  Content Central -->
 
-                    <div class="instagram-btn d-none">
+                    <div class="instagram-btn">
                         <div class="btn-instagram">
                             <i class="fa fa-instagram"></i>
                             FOLLOW
-                            <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;oasisfootballscouting</a>
+                            <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;fifaworldcup</a>
                         </div>
                     </div>
 
@@ -135,8 +127,6 @@ import { useToast } from 'vue-toastification'
 
 const toast = useToast()
 
-
-
 export default {
   components: {
     paystack,
@@ -149,12 +139,7 @@ export default {
         firstname:'Somtea', //optional field remember to pass as a prop of firstname if needed
         lastname:'Codes', //optional field remember to pass as a prop of lastname if needed
 
-
-        fullPage: false,
-
-        xname: '',
-        xemail: '',
-        xphone: '',
+        otp: '',
 
         loading: false
 
@@ -185,73 +170,68 @@ export default {
   // methods
   methods: {
 
-
-      register(){
-
-
-          this.loading  = true
+      verifyEmail(){
 
 
-
-        // let loader = this.$loading.show({
-        //     // Optional parameters
-        //     container: this.fullPage ? null : this.$refs.formContainer,
-        //     canCancel: true,
-        //     onCancel: this.onCancel,
-        //     color: '#6CC3EC',
-        // });
+          this.loading = true
 
 
-          this.axios({
-                method: "post",
-                url: process.env.VUE_APP_URL+'/api/register',
-                data: {
-                    name: this.xname,
-                    // username: this.username,
-                    email: this.xemail,
-                    // referrer_code: this.referrer_code,
-                    password: nanoid(8)
-                },
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                
-                })
-                .then( (response) =>{
-                    //handle success
+                             this.axios({
+                                method: "post",
+                                url: process.env.VUE_APP_URL+'/api/verify_otp',
+                                data: {
+                                    otp: this.otp,
+                                },
+                                    headers: {
+                                    'Access-Control-Allow-Origin': '*',
+                                    'Content-type': 'application/json',
+                                    'Accept': 'application/json',
+                                    'Authorization': 'Bearer ' +localStorage.getItem('user_token')
+                                },
+                                
+                                })
+                                .then( (response) =>{
+                                    //handle success
+                                    if (response.data.user_data) {
 
-                    console.log(response)
+                                        
+                                    console.log(response)
 
-                    localStorage.setItem('user_role', response.data.user_data.role)
-                    localStorage.setItem('user_token', response.data.access_token)
-                    localStorage.setItem('user_data', JSON.stringify(response.data.user_data))
+                                    localStorage.setItem('user_role', response.data.user_data.role)
+                                    // localStorage.setItem('user_token', response.data.access_token)
+                                    localStorage.setItem('user_data', JSON.stringify(response.data.user_data))
 
-                    
-                    // loader.hide()
+                                    
+                                    this.loading = false
 
-                    this.loading = false
+                                     toast.success('Email Verified');
 
-                        toast.success('OTP Sent');
+                                    return this.$router.push('/profile')
+                                        
+                                    }else{
 
-                    return this.$router.push('/email-verification')
+                                        console.log(response);
 
-                
-                })
-                .catch( (response)=> {
+                                        toast.error('Invalid OTP');
 
-                    // alert(response);
-                    //handle error
-                    console.log(response);
+                                       this.loading = false
 
-                    toast.error('Invalid Credentials');
+                                    }
 
-                    // loader.hide()
+                                })
+                                .catch( (response)=> {
 
-                    this.loading = false
+                                    alert(response);
+                                    //handle error
+                                    console.log(response);
 
-                });
+                                   toast.error('Invalid OTP');
+
+
+                                   this.loading = false
+
+                                 
+                                });
 
 
 
