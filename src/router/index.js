@@ -6,6 +6,8 @@ import Contact from '../views/Contact.vue'
 import Error404 from '../views/404.vue'
 import PlayerList from '../views/PlayerList.vue'
 import Registration from '../views/Registration.vue'
+import Admin from '../views/Admin.vue'
+import Login from '../views/Login.vue'
 import EmailVerification from '../views/EmailVerification.vue'
 import Profile from '../views/Profile.vue'
 import RegistrationSuccess from '../views/RegistrationSuccess.vue'
@@ -45,6 +47,19 @@ const routes = [
           path: 'registration',
           name: 'Registration',
           component: Registration
+        },
+
+
+        {
+          path: 'admin',
+          name: 'Admin',
+          component: Admin
+        },
+
+        {
+          path: 'login',
+          name: 'Login',
+          component: Login
         },
 
         {

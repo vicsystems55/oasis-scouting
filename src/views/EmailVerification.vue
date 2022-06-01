@@ -20,7 +20,7 @@
 
                                     <form class=" form-theme padding-top-mini">
                                         <div class="form-group">
-                                            <label class="text-center col-sm-12 mx-auto">OTP</label>
+                                            <label class="text-center col-sm-12 mx-auto">Security Code</label>
                                             <div class="col-sm-6 mx-auto">
                                                 <input type="text"  v-model="otp" class="form-control text-center" placeholder="Enter OTP" y="">
                                             </div>
@@ -65,7 +65,7 @@
                         </div>
 
                         <!-- Newsletter -->
-                        <div class="section-newsletter">
+                        <div class="section-newsletter d-none">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">

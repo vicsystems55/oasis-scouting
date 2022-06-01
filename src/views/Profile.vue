@@ -26,7 +26,7 @@
                                             id="previewImg" 
                                             style="height: 200px; width: 200px; object-fit: cover; border-radius: 50%;" 
                                             class="border border-primary" 
-                                            :src="'https://eu.ui-avatars.com/api/?name='+ userData.name" >
+                                            :src="playersData.avatar??('https://eu.ui-avatars.com/api/?name='+ userData.name)" >
 
 
                                                
@@ -56,7 +56,7 @@
                                             id="previewImg2" 
                                             style=" width: 100%; object-fit: cover;" 
                                             class="border border-primary" 
-                                            :src="'https://eu.ui-avatars.com/api/?name='+ userData.name"
+                                            :src="playersData.profile?.video_id??''"
                                             controls
                                             >
                                             </video>
@@ -89,17 +89,26 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Nationality</label>
                                             <div class="col-sm-10">
-                                                <select id="ersex" name="ersex" class="form-control" y="">
+                                                <select id="ersex" v-model="nationality" class="form-control" y="">
+                                                    <option 
+                                                    value="" 
+                                                    :class="playersData.profile?.nationality?'':'d-none'"
+                                                    >{{playersData.profile?.nationality}}</option>
                                                     <option value="">Select Country</option>
-                                                    <option value="Nigeria">Nigeria</option>
+                                                    <option :value="Nigeria" >Nigeria</option>
                                                    
                                                 </select>
                                             </div>
                                         </div>
+
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">State</label>
                                             <div class="col-sm-10">
-                                                <select id="ersex" name="ersex" class="form-control" y="">
+                                                <select id="ersex" v-model="state" class="form-control" y="">
+                                                <option 
+                                                    value="" 
+                                                    :class="playersData.profile?.state?'':'d-none'"
+                                                    >{{playersData.profile?.state}}</option>
                                                     <option value="">Select State of Origin</option>
                                                     <option value="Abia">Abia</option>
                                                     <option value="Adamawa">Adamawa</option>
@@ -144,19 +153,25 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Address</label>
                                             <div class="col-sm-10">
-                                                <textarea id="eraddr" name="eraddr" class="form-control" placeholder="Type your address"></textarea>
+                                                {{playersData.profile?.address}}
+                                                <textarea  v-model="address" class="form-control" placeholder="Type your address"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Date of Birth</label>
                                             <div class="col-sm-10">
-                                                <input type="date" id="erdate" name="erdate" class="form-control" y="">
+                                                <input type="date" id="erdate" v-model="dob" class="form-control" y="">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Under a contract?</label>
                                             <div class="col-sm-10">
-                                                <select id="erage" name="erage" class="form-control" y="">
+                                                <select id="erage" v-model="under_contract" class="form-control" y="">
+                                                <option 
+                                                    value="" 
+                                                    :class="playersData.profile?.under_contract?'':'d-none'"
+                                                    >{{playersData.profile?.under_contract}}</option>
+
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                             
@@ -166,13 +181,13 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Duration (Months):</label>
                                             <div class="col-sm-10">
-                                                <input type="number" id="erphone" name="contract_duration" class="form-control" placeholder="Duration of Contract" y="">
+                                                <input type="number" id="erphone" v-model="contract_duration" class="form-control" placeholder="Duration of Contract" y="">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Any Health Condition?</label>
                                             <div class="col-sm-10">
-                                                <select id="erage" name="erage" class="form-control" y="">
+                                                <select id="erage" v-model="health_condition" class="form-control" y="">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                             
@@ -189,21 +204,27 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Fullname</label>
                                             <div class="col-sm-10">
-                                                <input type="text"  name="fullname" class="form-control" placeholder="Type guardian/parent's fullname" y="">
+                                                <input type="text"  v-model="guardian_name" class="form-control" placeholder="Type guardian/parent's fullname" y="">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Phone</label>
                                             <div class="col-sm-10">
-                                                <input type="text"  name="fullname" class="form-control" placeholder="Type guardian/parent's phone" y="">
+                                                <input type="text"  v-model="guardian_phone" class="form-control" placeholder="Type guardian/parent's phone" y="">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Address</label>
                                             <div class="col-sm-10">
-                                                <textarea id="eraddr" name="eraddr" class="form-control" placeholder="Type your guardian/parent's address"></textarea>
+                                                <textarea id="eraddr" v-model="guardian_address" class="form-control" placeholder="Type your guardian/parent's address"></textarea>
                                             </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <button @click="updateProfile()" class="btn btn-primary">Update Profile</button>
                                         </div>
 
 
@@ -245,42 +266,7 @@
                         </div>
 
                         <!-- Newsletter -->
-                        <div class="section-newsletter">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="text-center">
-                                            <h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
-                                            <p>Duis non lorem porta,  eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat.</p>
-                                        </div>
-                                        <form id="newsletterForm" action="php/mailchip/newsletter-subscribe.php">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </span>
-                                                        <input class="form-control" placeholder="Your Name" name="name"  type="text" y="y">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </span>
-                                                        <input class="form-control" placeholder="Your  Email" name="email"  type="email" y="y">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-primary" type="submit" name="subscribe" >SIGN UP</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div id="result-newsletter"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- End Newsletter -->
                     </section>
                     <!-- End Section Area -  Content Central -->
@@ -289,7 +275,7 @@
                         <div class="btn-instagram">
                             <i class="fa fa-instagram"></i>
                             FOLLOW
-                            <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;fifaworldcup</a>
+                            <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;oasisfootballscout</a>
                         </div>
                     </div>
 
@@ -345,7 +331,9 @@ export default {
 
         video: '',
 
-        avatar: ''
+        avatar: '',
+
+        playersData: []
     
 
 
@@ -538,7 +526,7 @@ export default {
 
                              this.axios({
                                 method: "post",
-                                url: process.env.VUE_APP_URL+'/api/update_profile',
+                                url: process.env.VUE_APP_URL+'/api/update_application',
                                 data: {
 
                                    
@@ -567,32 +555,14 @@ export default {
                                 
                                 })
                                 .then( (response) =>{
-                                    //handle success
-                                    if (response.data.user_data) {
 
-                                        
+
                                     console.log(response)
 
-                                    localStorage.setItem('user_role', response.data.user_data.role)
-                                    // localStorage.setItem('user_token', response.data.access_token)
-                                    localStorage.setItem('user_data', JSON.stringify(response.data.user_data))
 
-                                    
-                                    this.loading = false
-
-                                     toast.success('Email Verified');
-
-                                    return this.$router.push('/profile')
-                                        
-                                    }else{
-
-                                        console.log(response);
-
-                                        toast.error('Invalid OTP');
-
-                                       this.loading = false
-
-                                    }
+                                     toast.success('Application Submitted successfully');
+                                    //handle success
+                                   
 
                                 })
                                 .catch( (response)=> {
@@ -601,7 +571,7 @@ export default {
                                     //handle error
                                     console.log(response);
 
-                                   toast.error('Invalid OTP');
+                                   toast.error('An error has occured');
 
 
                                    this.loading = false
@@ -614,20 +584,64 @@ export default {
       },
 
 
-    
+      getPlayerData(){
 
-    onSuccessfulPayment: function(response) {
-      console.log(response);
 
-    },
-    onCancelledPayment: function() {
-      console.log("Payment cancelled by user");
-    },
+                                this.axios({
+                                method: "post",
+                                url: process.env.VUE_APP_URL+'/api/playersData',
+
+                                data: {
+                                    'player_code': '123'
+                                },
+                                
+                                    headers: {
+                                    'Access-Control-Allow-Origin': '*',
+                                    'Accept': 'application/json',
+                                    'Authorization': 'Bearer ' +localStorage.getItem('user_token')
+                                },
+                                
+                                })
+                                .then( (response) =>{
+                    
+                                    // console.log(response)
+
+                                    this.playersData = response.data
+
+                                    this.address = this.playersData.profile?.address
+                                    this.dob = this.playersData.profile?.dob
+
+                                
+
+                                    console.log(this.playersData)
+
+                                })
+                                .catch( (response)=> {
+
+                                    console.log(response);
+
+                         
+                                });
+
+
+            },
+
+
+        onSuccessfulPayment: function(response) {
+        console.log(response);
+
+        },
+        onCancelledPayment: function() {
+        console.log("Payment cancelled by user");
+        },
   },
 
   mounted() {
+
+      this.getPlayerData()
     
-        this.userData = JSON.parse(localStorage.getItem('user_data'));
-  },
-};
+        this.userData = JSON.parse(localStorage.getItem('user_data'))
+  
+},
+}
 </script>

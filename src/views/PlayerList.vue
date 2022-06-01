@@ -381,7 +381,7 @@
                 </div>
 
                 <!-- Newsletter -->
-                <div class="section-newsletter">
+                <div class="section-newsletter d-none">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -421,11 +421,11 @@
             </section>
             <!-- End Section Area -  Content Central -->
 
-            <div class="instagram-btn">
+            <div class="instagram-btn mt-5">
                 <div class="btn-instagram">
                     <i class="fa fa-instagram"></i>
                     FOLLOW
-                    <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;fifaworldcup</a>
+                    <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;oasisfootballscout</a>
                 </div>
             </div>
 
