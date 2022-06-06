@@ -1,4 +1,4 @@
-<template lang="html">
+<template lang="">
                     <!-- Section Area - Content Central -->
                     <section class="content-info">
 
@@ -12,7 +12,7 @@
                                 <div class="info-panel">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <p class="lead ">Welcome, {{userData.name}} please proceed.</p>
+                                            <p class="lead ">Welcome, {{playersData.name}} please proceed.</p>
                                         </div>
                                     </div>
 
@@ -26,7 +26,7 @@
                                             id="previewImg" 
                                             style="height: 200px; width: 200px; object-fit: cover; border-radius: 50%;" 
                                             class="border border-primary" 
-                                            :src="playersData.avatar??('https://eu.ui-avatars.com/api/?name='+ userData.name)" >
+                                            :src="playersData.avatar" >
 
 
                                                
@@ -587,10 +587,12 @@ export default {
       getPlayerData(){
 
 
-          if (this.$route.params.id) {
+          if(this.$route.params.id) {
+
+            //   alert(this.$route.params.id)
 
 
-                                              this.axios({
+                                this.axios({
                                 method: "post",
                                 url: process.env.VUE_APP_URL+'/api/playersData',
 

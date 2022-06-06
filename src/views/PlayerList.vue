@@ -24,7 +24,7 @@
 
                 <!-- Nav Filters -->
                 <div class="portfolioFilter">
-                    <div class="container">
+                    <div class="container d-none">
                         <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
                         <a href="#" data-filter="*" class="current">Show All</a>
                         <a href="#" data-filter=".forward">Forward</a>
@@ -35,7 +35,7 @@
                 </div>
                 <!-- End Nav Filters -->
 
-                <div  class="">
+                <div  class="padding-top">
                     <div v-if="loading"  style="min-height: 300px;" class="container text-center">
 
                         <div class="pt-5"></div>
@@ -56,19 +56,19 @@
                                     <div class="overlay"><a href="single-player.html">+</a></div>
                                 </div>
                                 <div class="info-player">
-                                    <span class="number-player">
+                                    <span class="number-player d-none">
                                         2
                                     </span>
                                     <h4>
                                         {{player.name}}
-                                        <span>Midfielder</span>
+                                      
                                     </h4>
                                     <ul>
                                         <li>
                                             <strong>NATIONALITY</strong> <span > {{player.profile?player.profile.nationality:''}} </span>
                                         </li>
-                                        <li><strong>MATCHES:</strong> <span>90</span></li>
-                                        <li><strong>AGE:</strong> <span>28</span></li>
+                                        <li class="d-none"><strong>MATCHES:</strong> <span>90</span></li>
+                                        <li><strong>DATE OF BIRTH:</strong> <span>{{player.profile?player.profile.dob:''}}</span></li>
                                     </ul>
                                 </div>
                                 <router-link :to="{name:'PlayerDetails',params:{id:player.usercode} }" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></router-link>
