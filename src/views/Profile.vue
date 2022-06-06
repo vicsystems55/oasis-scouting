@@ -587,6 +587,51 @@ export default {
       getPlayerData(){
 
 
+          if (this.$route.params.id) {
+
+
+                                              this.axios({
+                                method: "post",
+                                url: process.env.VUE_APP_URL+'/api/playersData',
+
+                                data: {
+                                    'player_code': this.$route.params.id
+                                },
+                                
+                                    headers: {
+                                    'Access-Control-Allow-Origin': '*',
+                                    'Accept': 'application/json',
+                                    'Authorization': 'Bearer ' +localStorage.getItem('user_token')
+                                },
+                                
+                                })
+                                .then( (response) =>{
+                    
+                                    // console.log(response)
+
+                                    this.playersData = response.data
+
+                                    this.address = this.playersData.profile?.address
+                                    this.dob = this.playersData.profile?.dob
+
+                                
+
+                                    console.log(this.playersData)
+
+                                })
+                                .catch( (response)=> {
+
+                                    console.log(response);
+
+                         
+                                });
+
+
+              
+          }else{
+
+
+              
                                 this.axios({
                                 method: "post",
                                 url: process.env.VUE_APP_URL+'/api/playersData',
@@ -622,6 +667,12 @@ export default {
 
                          
                                 });
+
+          }
+
+
+
+
 
 
             },

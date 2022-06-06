@@ -6,7 +6,7 @@ import Contact from '../views/Contact.vue'
 import Error404 from '../views/404.vue'
 import PlayerList from '../views/PlayerList.vue'
 import Registration from '../views/Registration.vue'
-import Admin from '../views/Admin.vue'
+import Admin from '../views/PlayerList.vue'
 import Login from '../views/Login.vue'
 import EmailVerification from '../views/EmailVerification.vue'
 import Profile from '../views/Profile.vue'
@@ -72,6 +72,12 @@ const routes = [
         {
           path: 'profile',
           name: 'Profile',
+          component: Profile
+        },
+
+        {
+          path: '/admin/player-details/:id',
+          name: 'PlayerDetails',
           component: Profile
         },
       

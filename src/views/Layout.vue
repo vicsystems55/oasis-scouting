@@ -1,5 +1,5 @@
 <template>
-        <div id="layout">
+        <div style="height: 100%;" id="layout" class=" ">
             <!-- Header-->
             <header class="header-3">
                 <!-- End headerbox-->
@@ -99,11 +99,16 @@
                 <!-- End Menu-->
             </div>
             <!-- End Mobile Nav-->
+              
+    
+                   <div class="c">
+                        <router-view></router-view>
+                   </div>
 
-                    <router-view></router-view>
+               
 
             <!-- footer 2-->
-            <footer id="footer" class="footer-2">
+            <footer id="footer" class="footer-2 align-bottom">
                 <!-- Footer Top-->
                 <div class="top-footer">
 
@@ -189,18 +194,7 @@
                             <!-- End Column Links -->
 
                             <!-- Column Links -->
-                            <div class="col-lg-4 col-md-7 col-sm-7">
-                                <div class="info-links">
-                                   <h5>Organisation</h5>
-                                    <ul class="columns">
-                                        <li><a href="#">NIZHNY NOVGOROD</a></li>
-                                        <li><a href="#">SAINT PETERSBURG</a></li>
-                                        <li><a href="#">EKATERINBURG</a></li>
-                                        <li><a href="#">MOSCOW</a></li>
-                                     
-                                    </ul>
-                                </div>
-                            </div>
+                            
                             <!-- End Column Links -->
 
                         </div>
