@@ -22,8 +22,41 @@ const routes = [
         {
           path: '',
           name: 'Home',
-          component: Home
-        },
+          component: Home,
+          beforeEnter: () => {
+
+
+            // if (localStorage.getItem('reloaded')) {
+            //   // The page was just reloaded. Clear the value from local storage
+            //   // so that it will reload the next time this page is visited.
+            //   localStorage.removeItem('reloaded');
+            // } else {
+            //     // Set a flag so that we know not to reload the page twice.
+            //     localStorage.setItem('reloaded', '1');
+            
+            //     alert('once')
+
+            // }
+
+            
+
+            // location.reload()
+            // ...
+                // if (localStorage.getItem('user_role') == '6') {
+                //     console.log('yes')
+                  
+                // }else{
+                //     console.log('no board')
+                //     router.push({
+                //         path: '/login',
+                //         replace: true
+                //       });
+                  
+        
+                // }
+            },
+
+          },
       
         {
           path: 'about',

@@ -101,7 +101,7 @@
                 <!-- End Gray Section -->
 
                 <!-- End gray Section -->
-                <div class="default-section paddings">
+                <div class="default-section paddings d-none">
                     <div class="container">
                         <div class="row">
                              <!-- Item Player -->
@@ -221,7 +221,7 @@
                 <!-- End Gray Section -->
 
                 <!-- White Section -->
-                <div class="white-section paddings">
+                <div class="white-section paddings d-none">
                     <div class="container">
                        <!--Items Club News -->
                        <div class="row">
@@ -289,7 +289,7 @@
                 <!-- End White Section -->
 
                 <!-- Sponsors-->
-                <div class="default-section paddings">
+                <div class="default-section paddings d-none">
                     <div class="container">
                         <!--Sponsors CLub -->
                        <div class="row no-line-height">

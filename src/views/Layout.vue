@@ -36,7 +36,7 @@
 
                             <li class="current">
 
-                                <router-link to="/">Home</router-link>
+                                 <router-link to="/" >Home</router-link>
                             
                             </li>
 
@@ -55,6 +55,12 @@
                             <li class="current">
 
                                 <router-link to="/registration">Registration</router-link>
+                                
+                            </li>
+
+                            <li class="current">
+
+                                <router-link to="/login">Login</router-link>
                                 
                             </li>
 
@@ -80,7 +86,7 @@
                    
 
                     <li>
-                        <router-link to="/">Home</router-link>
+                         <router-link to="/" >Home</router-link>
                     </li>
 
                     <li>
@@ -94,6 +100,10 @@
                         <router-link to="/registration">Registration</router-link>
                     </li>
 
+                    <li>
+                        <router-link to="/login">Login</router-link>
+                    </li>
+
                    
                 </ul>
                 <!-- End Menu-->
@@ -102,7 +112,7 @@
               
     
                    <div class="c">
-                        <router-view></router-view>
+                        <router-view  ></router-view>
                    </div>
 
                
@@ -218,3 +228,21 @@
             <!-- End footer 2-->
         </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            url: process.env.VUE_APP_BASE_URL
+        }
+    },
+
+    mounted() {
+
+        // this.ur = process.VUE
+
+
+        // alert((process.env.VUE_APP_BASE_URL))
+
+    },
+}
+</script>

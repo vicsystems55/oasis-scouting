@@ -222,18 +222,21 @@
                                         </div>
 
 
-
-                                        <div class="form-group">
-                                            <button @click="updateProfile()" class="btn btn-primary">Update Profile</button>
+                                        <div v-if="loadingx" class="form-group d-flex justify-content-center">
+                                            <button  class="btn btn-primary" disabled>Processing...</button>
+                                        </div>
+                                        <div v-else class="form-group d-flex justify-content-center">
+                                            <button @click="updateProfile()" class="btn btn-primary">Proceed to Payment of N 5,000</button>
                                         </div>
 
 
                                                     
 
 
-                                        <div class="form-group">
+                                        <div class="form-group d-none">
                                             <div class="offset-sm-2 col-sm-10">
                                                     <paystack
+                                                    id="payButton"
                                                         buttonClass="'button-class btn btn-primary btn-block col-md-12'"
                                                         buttonText="Proceed to Pay  N 5,000.00"
                                                         :publicKey="publicKey"
@@ -308,6 +311,8 @@ export default {
         userData: [],
         
         loading: false,
+
+        loadingx: false,
 
         loading2: false,
 
@@ -521,7 +526,7 @@ export default {
       updateProfile(){
 
 
-                    this.loading = true
+                    this.loadingx = true
 
 
                              this.axios({
@@ -559,9 +564,15 @@ export default {
 
                                     console.log(response)
 
+                                
+
 
                                      toast.success('Application Submitted successfully');
                                     //handle success
+
+                                    this.loadingx = false
+
+                                    document.getElementById('payButton').click();
                                    
 
                                 })
@@ -574,7 +585,7 @@ export default {
                                    toast.error('An error has occured');
 
 
-                                   this.loading = false
+                                   this.loadingx = false
 
                                  
                                 });
@@ -682,6 +693,8 @@ export default {
 
         onSuccessfulPayment: function(response) {
         console.log(response);
+
+         return this.$router.push('/registeration-success')
 
         },
         onCancelledPayment: function() {
