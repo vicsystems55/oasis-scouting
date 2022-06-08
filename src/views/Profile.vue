@@ -204,7 +204,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2">Fullname</label>
                                             <div class="col-sm-10">
-                                                <input type="text"  v-model="guardian_name" class="form-control" placeholder="Type guardian/parent's fullname" y="">
+                                                <input type="text"  v-model="guardian_name"  class="form-control" placeholder="Type guardian/parent's fullname" y="">
                                             </div>
                                         </div>
 
@@ -529,66 +529,22 @@ export default {
 
                             this.axios({
                                 method: "get",
-                                url: process.env.VUE_APP_URL+'/api/update_application',
-                                data: {
-
-                                   
-                                    nationality: this.nationality,
-                                    state: this.state,
-                                    address: this.address,
-                                    dob: this.dob,
-                                    under_contract: this.under_contract,
-                                    contract_duration: this.contract_duration,
-                                    health_condition: this.health_condition,
-                                    health_condition_desc: this.health_condition_desc,
-                                    guardian_name: this.guardian_name,
-                                    guardian_phone: this.guardian_phone,
-                                    guardian_address: this.guardian_address,
-                                    video_id: this.video_id,
-                                    transaction_id: this.transaction_id,
-                                
-
-                                },
-                                    headers: {
-                                    'Access-Control-Allow-Origin': '*',
-                                    'Content-type': 'application/json',
-                                    'Accept': 'application/json',
-                                    'Authorization': 'Bearer ' +localStorage.getItem('user_token')
-                                },
-                                
+                                url: 'https://vimeo.com/api/oembed.json?url='+this.userData.profile?.video_id,
+                                                                
                                 })
                                 .then( (response) =>{
 
 
                                     console.log(response)
 
-                                
-
-
-                                     toast.success('Application Submitted successfully');
-                                    //handle success
-
-                                    this.loadingx = false
-
-
-                                    return this.$router.push('/payment-page')
-
-                                    // document.getElementById('payButton').click();
-                                   
 
                                 })
                                 .catch( (response)=> {
 
-                                    alert(response);
+                                    // alert(response);
                                     //handle error
                                     console.log(response);
 
-                                   toast.error('An error has occured');
-
-
-                                   this.loadingx = false
-
-                                 
                                 });
 
         },
@@ -676,6 +632,8 @@ export default {
 
             //   alert(this.$route.params.id)
 
+            // alert('we')
+
 
                                 this.axios({
                                 method: "post",
@@ -700,6 +658,13 @@ export default {
 
                                     this.address = this.playersData.profile?.address
                                     this.dob = this.playersData.profile?.dob
+
+
+                                    alert(this.playersData.profile?.guardian_name)
+
+                                    this.guardian_name =  this.playersData.profile?.guardian_name
+                                    this.guardian_phone = this.playersData.profile?.guardian_phone
+                                    this.guardian_address =  this.playersData.profile?.guardian_address
 
                                 
 
@@ -743,6 +708,11 @@ export default {
                                     this.address = this.playersData.profile?.address
                                     this.dob = this.playersData.profile?.dob
 
+                                    this.guardian_name = this.playersData.profile?.guardian_name
+                                    this.guardian_phone = this.playersData.profile?.guardian_phone
+                                    this.guardian_address =  this.playersData.profile?.guardian_address
+                                   
+
                                 
 
                                     console.log(this.playersData)
@@ -778,7 +748,11 @@ export default {
 
   mounted() {
 
+
+
       this.getPlayerData()
+
+      this.getEmbededCode()
     
         this.userData = JSON.parse(localStorage.getItem('user_data'))
   
