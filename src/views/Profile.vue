@@ -51,7 +51,12 @@
 
                                         <div class="form-group d-flex justify-content-center">
 
+
+                                             <div v-if="playersData.profile?.video_id" v-html="html"></div>
+
                                             <video 
+
+                                            v-else
                                             onclick="document.getElementById('customFile2').click()" 
                                             id="previewImg2" 
                                             style=" width: 100%; object-fit: cover;" 
@@ -62,7 +67,7 @@
                                             </video>
 
 
-                                            {{html}}
+                                           
 
 
                                                
@@ -343,7 +348,9 @@ export default {
 
         playersData: [],
 
-        html: ''
+        html: '',
+
+        vvv: ''
     
 
 
@@ -530,11 +537,13 @@ export default {
 
         getEmbededCode(){
 
+        // alert(this.vvv)
+
             // https://vimeo.com/api/oembed.json?url=https://vimeo.com/718287822
 
                             this.axios({
                                 method: "get",
-                                url: 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/'+this.userData.profile?.video_id,
+                                url: 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/'+this.playersData.profile?.video_id,
                                                                 
                                 })
                                 .then( (response) =>{
@@ -673,6 +682,12 @@ export default {
                                     this.guardian_phone = this.playersData.profile?.guardian_phone
                                     this.guardian_address =  this.playersData.profile?.guardian_address
 
+                                    this.vvv =  this.playersData.profile?.video_id
+
+                            
+
+                                  
+
                                 
 
                                     console.log(this.playersData)
@@ -718,9 +733,15 @@ export default {
                                     this.guardian_name = this.playersData.profile?.guardian_name
                                     this.guardian_phone = this.playersData.profile?.guardian_phone
                                     this.guardian_address =  this.playersData.profile?.guardian_address
+
+
+                                    this.vvv =  this.playersData.profile?.video_id
+
+
+                                    alert(this.vvv)
                                    
 
-                                
+                                    this.getEmbededCode()
 
                                     console.log(this.playersData)
 
@@ -759,7 +780,7 @@ export default {
 
       this.getPlayerData()
 
-      this.getEmbededCode()
+      
     
         this.userData = JSON.parse(localStorage.getItem('user_data'))
   
