@@ -11,6 +11,7 @@ import Login from '../views/Login.vue'
 import EmailVerification from '../views/EmailVerification.vue'
 import Profile from '../views/Profile.vue'
 import RegistrationSuccess from '../views/RegistrationSuccess.vue'
+import PaymentPage from '../views/PaymentPage.vue'
 
 const routes = [
 
@@ -118,6 +119,12 @@ const routes = [
           path: 'registration-success',
           name: 'RegistrationSuccess',
           component: RegistrationSuccess
+        },
+
+        {
+          path: 'payment-page',
+          name: 'PaymentPage',
+          component: PaymentPage
         },
 
         {

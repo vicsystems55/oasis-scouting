@@ -238,7 +238,7 @@
                                                     <paystack
                                                     id="payButton"
                                                         buttonClass="'button-class btn btn-primary btn-block col-md-12'"
-                                                        buttonText="Proceed to Pay  N 5,000.00"
+                                                        buttonText="Proceed to Payment"
                                                         :publicKey="publicKey"
                                                         :email="email"
                                                         :amount="amount"
@@ -572,7 +572,10 @@ export default {
 
                                     this.loadingx = false
 
-                                    document.getElementById('payButton').click();
+
+                                    return this.$router.push('/payment-page')
+
+                                    // document.getElementById('payButton').click();
                                    
 
                                 })
@@ -650,7 +653,7 @@ export default {
                                 url: process.env.VUE_APP_URL+'/api/playersData',
 
                                 data: {
-                                    'player_code': '123'
+                                    'player_code': this.userData.usercode
                                 },
                                 
                                     headers: {
