@@ -529,7 +529,7 @@ export default {
 
                             this.axios({
                                 method: "get",
-                                url: 'https://vimeo.com/api/oembed.json?url='+this.userData.profile?.video_id,
+                                url: 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/'+this.userData.profile?.video_id,
                                                                 
                                 })
                                 .then( (response) =>{
