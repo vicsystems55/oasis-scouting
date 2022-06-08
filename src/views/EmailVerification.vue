@@ -212,7 +212,7 @@ export default {
 
                                         console.log(response);
 
-                                        toast.error('Invalid OTP');
+                                        toast.error('Invalid Security Code');
 
                                        this.loading = false
 
@@ -225,7 +225,7 @@ export default {
                                     //handle error
                                     console.log(response);
 
-                                   toast.error('Invalid OTP');
+                                   toast.error('Invalid Security Code');
 
 
                                    this.loading = false

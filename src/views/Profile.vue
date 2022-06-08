@@ -95,7 +95,7 @@
                                                     :class="playersData.profile?.nationality?'':'d-none'"
                                                     >{{playersData.profile?.nationality}}</option>
                                                     <option value="">Select Country</option>
-                                                    <option :value="Nigeria" >Nigeria</option>
+                                                    <option value="Nigeria" >Nigeria</option>
                                                    
                                                 </select>
                                             </div>
@@ -519,6 +519,77 @@ export default {
 
 
             }
+
+        },
+
+
+        getEmbededCode(){
+
+            // https://vimeo.com/api/oembed.json?url=https://vimeo.com/718287822
+
+                            this.axios({
+                                method: "get",
+                                url: process.env.VUE_APP_URL+'/api/update_application',
+                                data: {
+
+                                   
+                                    nationality: this.nationality,
+                                    state: this.state,
+                                    address: this.address,
+                                    dob: this.dob,
+                                    under_contract: this.under_contract,
+                                    contract_duration: this.contract_duration,
+                                    health_condition: this.health_condition,
+                                    health_condition_desc: this.health_condition_desc,
+                                    guardian_name: this.guardian_name,
+                                    guardian_phone: this.guardian_phone,
+                                    guardian_address: this.guardian_address,
+                                    video_id: this.video_id,
+                                    transaction_id: this.transaction_id,
+                                
+
+                                },
+                                    headers: {
+                                    'Access-Control-Allow-Origin': '*',
+                                    'Content-type': 'application/json',
+                                    'Accept': 'application/json',
+                                    'Authorization': 'Bearer ' +localStorage.getItem('user_token')
+                                },
+                                
+                                })
+                                .then( (response) =>{
+
+
+                                    console.log(response)
+
+                                
+
+
+                                     toast.success('Application Submitted successfully');
+                                    //handle success
+
+                                    this.loadingx = false
+
+
+                                    return this.$router.push('/payment-page')
+
+                                    // document.getElementById('payButton').click();
+                                   
+
+                                })
+                                .catch( (response)=> {
+
+                                    alert(response);
+                                    //handle error
+                                    console.log(response);
+
+                                   toast.error('An error has occured');
+
+
+                                   this.loadingx = false
+
+                                 
+                                });
 
         },
 

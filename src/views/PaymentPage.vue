@@ -80,7 +80,7 @@ export default {
         onSuccessfulPayment: function(response) {
         console.log(response);
 
-         return this.$router.push('/registeration-success')
+         return this.$router.push('/registration-success')
 
         },
         onCancelledPayment: function() {

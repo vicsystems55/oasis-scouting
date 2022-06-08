@@ -233,7 +233,7 @@ export default {
 
                     this.loading = false
 
-                        toast.success('OTP Sent');
+                        toast.success('Security Code Sent');
 
                     return this.$router.push('/email-verification')
 
@@ -245,7 +245,7 @@ export default {
                     //handle error
                     console.log(response);
 
-                    toast.error('Invalid Credentials');
+                    toast.error('An error has occured, please try again');
 
                     // loader.hide()
 
