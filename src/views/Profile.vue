@@ -62,6 +62,9 @@
                                             </video>
 
 
+                                            {{html}}
+
+
                                                
 
                                         </div> 
@@ -338,7 +341,9 @@ export default {
 
         avatar: '',
 
-        playersData: []
+        playersData: [],
+
+        html: ''
     
 
 
@@ -536,6 +541,8 @@ export default {
 
 
                                     console.log(response)
+
+                                    this.html = response.data.html
 
 
                                 })
