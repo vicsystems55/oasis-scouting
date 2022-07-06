@@ -633,7 +633,7 @@
                           <span>Company Value</span>
                               Who Are You
                           </h4>
-                          <p>The top seeds in Groups C and D both have designs on winning their respective sections. But if one of them advances as a group winner and the other as a runner-up, then we will be seeing Lionel Messi facing off against Antoine Griezmann either in Kazan (30 June) or Nizhny Novgorod (1 July), depending on their team’s group placings.</p>
+                          <p>To have a positive impact on the community and develop better people through football. We want to create a lasting legacy for anyone who comes into contact with our club and for them to develop a lifelong association whether as players, coaches, officials or supporters.</p>
 
                           <div class="row">
                               <div class="col-lg-6">
