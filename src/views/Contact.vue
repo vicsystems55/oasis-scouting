@@ -2,7 +2,8 @@
     <div>
                     <!-- Google Map -->
             <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96675.78523415352!2d-74.04718227108513!3d40.78141356385996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ed64fc3b013b%3A0xd813d2023b2ead16!2sNew+York+County%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses!2sco!4v1515849243841" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Suit%2021f%20Melita%20plaza,%20off%20Gimbiya%20street,%20area%2011%20Garki,%20Abuja+(Oasis%20Scout)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/farm-gps/">gps for tractors</a></iframe></div>
             </div>
             <!-- End Google Map -->
 
@@ -19,10 +20,10 @@
                                 </div>
                                 <div class="info-panel">
                                     <address>
-                                      <strong>Sports Cup, Inc.</strong><br>
-                                      <i class="fa fa-map-marker"></i><strong>Address: </strong> fa795 Folsom Ave, Suite 600<br>
-                                      <i class="fa fa-plane"></i><strong>City: </strong>San Francisco, CA 94107<br>
-                                      <i class="fa fa-phone"></i> <abbr title="Phone">P:</abbr> (123) 456-7890
+                                      <strong>Oasis Scout</strong><br>
+                                      <i class="fa fa-map-marker"></i><strong>Address: </strong> Suit 21f Melita plaza, off Gimbiya street, area 11 Garki, Abuja<br>
+                                     
+                                      <i class="fa fa-phone"></i> <abbr title="Phone">P:</abbr> 07086427141
                                     </address>
                                 </div>
                             </aside>
@@ -33,8 +34,8 @@
                                 </div>
                                 <div class="info-panel">
                                     <address>
-                                      <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> sales@sportscup.com</a><br>
-                                      <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> support@sportscup.com</a>
+                                      <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> info@oasisfootballscout.org</a><br>
+                                     
                                     </address>
                                 </div>
                             </aside>

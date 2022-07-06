@@ -5,11 +5,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <h1>Page About Us</h1>
+                            <h1>About Us</h1>
                         </div>
 
                         <div class="col-md-4">
-                            <div class="breadcrumbs">
+                            <div class="breadcrumbs d-none">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li>Inner Page</li>
@@ -26,65 +26,32 @@
 
                 <!-- White Section -->
                 <div class="white-section paddings">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <img src="img/locations/1.jpg" alt="">
-                            </div>
-                            <div class="col-lg-7">
-                                <h4 class="subtitle">
-                                   <span>Company Value</span>
-                                    Who Are You
-                                </h4>
-                                <p>The top seeds in Groups C and D both have designs on winning their respective sections. But if one of them advances as a group winner and the other as a runner-up, then we will be seeing Lionel Messi facing off against Antoine Griezmann either in Kazan (30 June) or Nizhny Novgorod (1 July), depending on their team’s group placings.</p>
+                <div class="container">
+                  <div class="row">
+                      <div class="col-lg-5">
+                          <img src="img/locations/1.jpg" alt="">
+                      </div>
+                      <div class="col-lg-7">
+                          <h4 class="subtitle">
+                          <span>Company Value</span>
+                              Who Are You
+                          </h4>
+                          <p>To have a positive impact on the community and develop better people through football. We want to create a lasting legacy for anyone who comes into contact with our club and for them to develop a lifelong association whether as players, coaches, officials or supporters.</p>
 
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <h5>Our Mission</h5>
-                                        <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5>Our Vision</h5>
-                                        <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row padding-top">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="item-boxed-service">
-                                    <h4>Soccer Team </h4>
-                                    <p>Best Sports Features</p>
-                                    <a href="#"><i class="fa fa-plus-circle"></i>View More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="item-boxed-service">
-                                    <h4>Club Features</h4>
-                                    <p>Best Sports Features</p>
-                                    <a href="#"><i class="fa fa-plus-circle"></i>View More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="item-boxed-service">
-                                    <h4>Won cups</h4>
-                                    <p>Best Sports Features</p>
-                                    <a href="#"><i class="fa fa-plus-circle"></i>View More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="item-boxed-service">
-                                    <h4>Technical body</h4>
-                                    <p>Best Sports Features</p>
-                                    <a href="#"><i class="fa fa-plus-circle"></i>View More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                          <div class="row">
+                              <div class="col-lg-6">
+                                  <h5>Our Mission</h5>
+                                  <p>To provide the best possible football experience for everyone involved with our Club regardless of their age, sexuality, gender, ethnic origin or ability. We want to offer facilities and coaching in an atmosphere that is conducive to the development of every young person in terms of self-discipline, good behaviour and teamwork.</p>
+                              </div>
+                              <div class="col-lg-6">
+                                  <h5>Our Vision</h5>
+                                  <p>We want to firmly establish Oasis Football Club as the flagship football club in Sutton/Merton area to be the most respected community club in surrey.
+We will make every effort to insure that our coaches, develop the skills, fitness, team work and sportsmanship and to foster and perpetuate these qualities at all levels of their football growth. We will endeavor to empower our players with a life-long passion and love for the game of football.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
                 </div>
                 <!-- End White Section -->
 
