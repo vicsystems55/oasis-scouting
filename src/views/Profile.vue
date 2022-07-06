@@ -624,7 +624,7 @@ export default {
                                 })
                                 .catch( (response)=> {
 
-                                    alert(response);
+                                    // alert(response);
                                     //handle error
                                     console.log(response);
 
@@ -676,7 +676,7 @@ export default {
                                     this.dob = this.playersData.profile?.dob
 
 
-                                    alert(this.playersData.profile?.guardian_name)
+                                    // alert(this.playersData.profile?.guardian_name)
 
                                     this.guardian_name =  this.playersData.profile?.guardian_name
                                     this.guardian_phone = this.playersData.profile?.guardian_phone
@@ -738,7 +738,7 @@ export default {
                                     this.vvv =  this.playersData.profile?.video_id
 
 
-                                    alert(this.vvv)
+                                    // alert(this.vvv)
                                    
 
                                     this.getEmbededCode()

@@ -638,11 +638,12 @@
                           <div class="row">
                               <div class="col-lg-6">
                                   <h5>Our Mission</h5>
-                                  <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
+                                  <p>To provide the best possible football experience for everyone involved with our Club regardless of their age, sexuality, gender, ethnic origin or ability. We want to offer facilities and coaching in an atmosphere that is conducive to the development of every young person in terms of self-discipline, good behaviour and teamwork.</p>
                               </div>
                               <div class="col-lg-6">
                                   <h5>Our Vision</h5>
-                                  <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
+                                  <p>We want to firmly establish Oasis Football Club as the flagship football club in Sutton/Merton area to be the most respected community club in surrey.
+We will make every effort to insure that our coaches, develop the skills, fitness, team work and sportsmanship and to foster and perpetuate these qualities at all levels of their football growth. We will endeavor to empower our players with a life-long passion and love for the game of football.</p>
                               </div>
                           </div>
                       </div>
@@ -827,7 +828,7 @@
 
               <div class="container">
                   <div class="row justify-content-center padding-top">
-                      <router-link to="/register" class="btn-iw">Start Application</router-link>
+                      <router-link to="/registration" class="btn-iw">Start Application</router-link>
                       <router-link to="/login" class="btn-iw outline skin">Login</router-link>
                   </div>
               </div>
