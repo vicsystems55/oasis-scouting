@@ -14,7 +14,7 @@
                                 <div class="info-panel col-md-9 mx-auto">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <p class="lead ">Complete your application by filling the form below then proceed with your payment of N 5,000.00 registration fee.</p>
+                                            <p class="lead ">Complete your application by filling the form below then proceed with your payment of N 5,500.00 registration fee.</p>
                                         </div>
                                     </div>
 
@@ -144,7 +144,7 @@ export default {
   data() {
     return{
         publicKey:'pk_test_a597f2692e20038b6ec420cf207bb552a5389454',
-        amount:500000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
+        amount:550000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
         email:'somteacodes@gmail.com',
         firstname:'Somtea', //optional field remember to pass as a prop of firstname if needed
         lastname:'Codes', //optional field remember to pass as a prop of lastname if needed

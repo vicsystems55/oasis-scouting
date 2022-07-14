@@ -638,12 +638,11 @@
                           <div class="row">
                               <div class="col-lg-6">
                                   <h5>Our Mission</h5>
-                                  <p>To provide the best possible football experience for everyone involved with our Club regardless of their age, sexuality, gender, ethnic origin or ability. We want to offer facilities and coaching in an atmosphere that is conducive to the development of every young person in terms of self-discipline, good behaviour and teamwork.</p>
+                                  <p>To provide local football players with the opportunity to showcase their talents internationally by recommending their talents to football agent's and scouts across Europe, Asia, South America and Africa. I think it shouldn't be something too long.</p>
                               </div>
                               <div class="col-lg-6">
                                   <h5>Our Vision</h5>
-                                  <p>We want to firmly establish Oasis Football Club as the flagship football club in Sutton/Merton area to be the most respected community club in surrey.
-We will make every effort to insure that our coaches, develop the skills, fitness, team work and sportsmanship and to foster and perpetuate these qualities at all levels of their football growth. We will endeavor to empower our players with a life-long passion and love for the game of football.</p>
+                                  <p>To create an enabling environment for the local football players to thrive through collaborative effort with football agencies. We're not establishing football club.</p>
                               </div>
                           </div>
                       </div>
@@ -687,7 +686,7 @@ We will make every effort to insure that our coaches, develop the skills, fitnes
           <!-- End Gray Section - Testimonials -->
 
           <!-- White Section -->
-          <div class="white-section paddings">
+          <div class="white-section paddings d-none">
               <div class="container">
 
                   <div class="row align-items-center">
@@ -797,7 +796,7 @@ We will make every effort to insure that our coaches, develop the skills, fitnes
 
           <!-- End gray Section -->
           <div class="default-section paddings">
-              <div class="container">
+              <div class="container d-none">
                   <div class="row">
                       <div class="col-lg-12">
                           <div class="text-center padding-bottom">
@@ -809,7 +808,7 @@ We will make every effort to insure that our coaches, develop the skills, fitnes
               </div>
 
               <!-- Info Resalt-->
-              <div id="ri-grid" class="ri-grid ri-grid-size-2">
+              <div id="ri-grid" class="ri-grid ri-grid-size-2 d-none">
                   <img class="ri-loading-image" src="img/grid/loading.gif" alt="Image">
                   <ul>
                       <li><a href="#"><img src="img/grid/1.jpg" alt="Image"></a></li>
@@ -834,12 +833,12 @@ We will make every effort to insure that our coaches, develop the skills, fitnes
               </div>
 
           </div>
-                <div class="white-section paddings ">
+                <div class="white-section paddings d-none ">
                     <div class="container">
                        <!--Items Club News -->
                        <div class="row">
                           <div class="col-md-12">
-                              <h3 class="clear-title">Latest News</h3>
+                              <h3 class="clear-title">Latest News..</h3>
                           </div>
 
                           <!--Item Club News -->

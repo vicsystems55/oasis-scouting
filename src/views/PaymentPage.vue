@@ -15,7 +15,7 @@
                         <paystack
                         id="payButton"
                             buttonClass="'button-class btn btn-primary btn-block col-md-12'"
-                            buttonText="Pay  N 5,000.00"
+                            buttonText="Pay  N 5, 500.00"
                             :publicKey="publicKey"
                             :email="userData.email"
                             :amount="amount"
@@ -47,7 +47,7 @@ export default {
     data() {
         return {
         publicKey:'pk_test_a597f2692e20038b6ec420cf207bb552a5389454',
-        amount:500000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
+        amount:550000, //Expressed in lowest demonitation, so 1000kobo is equivalent to 10Naira
         email:'somteacodes@gmail.com',
         firstname:'Somtea', //optional field remember to pass as a prop of firstname if needed
         lastname:'Codes', 

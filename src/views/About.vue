@@ -25,8 +25,8 @@
             <section class="content-info">
 
                 <!-- White Section -->
-                <div class="white-section paddings">
-                <div class="container">
+            <div class="white-section paddings">
+              <div class="container">
                   <div class="row">
                       <div class="col-lg-5">
                           <img src="img/locations/1.jpg" alt="">
@@ -41,18 +41,17 @@
                           <div class="row">
                               <div class="col-lg-6">
                                   <h5>Our Mission</h5>
-                                  <p>To provide the best possible football experience for everyone involved with our Club regardless of their age, sexuality, gender, ethnic origin or ability. We want to offer facilities and coaching in an atmosphere that is conducive to the development of every young person in terms of self-discipline, good behaviour and teamwork.</p>
+                                  <p>To provide local football players with the opportunity to showcase their talents internationally by recommending their talents to football agent's and scouts across Europe, Asia, South America and Africa. I think it shouldn't be something too long.</p>
                               </div>
                               <div class="col-lg-6">
                                   <h5>Our Vision</h5>
-                                  <p>We want to firmly establish Oasis Football Club as the flagship football club in Sutton/Merton area to be the most respected community club in surrey.
-We will make every effort to insure that our coaches, develop the skills, fitness, team work and sportsmanship and to foster and perpetuate these qualities at all levels of their football growth. We will endeavor to empower our players with a life-long passion and love for the game of football.</p>
+                                  <p>To create an enabling environment for the local football players to thrive through collaborative effort with football agencies. We're not establishing football club.</p>
                               </div>
                           </div>
                       </div>
                   </div>
               </div>
-                </div>
+            </div>
                 <!-- End White Section -->
 
                 <!-- Parallax Section -->
