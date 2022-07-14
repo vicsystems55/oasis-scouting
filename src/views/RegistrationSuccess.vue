@@ -21,7 +21,7 @@
             </div>
 
             <div class="c text-center py-1">
-                 <router-link to="/user/home" class=" btn btn-warning btn-lg">My Dashboard</router-link>
+                 <router-link to="/profile" class=" btn btn-warning btn-lg">My Dashboard</router-link>
   
             </div>
 
