@@ -638,11 +638,11 @@
                           <div class="row">
                               <div class="col-lg-6">
                                   <h5>Our Mission</h5>
-                                  <p>To provide local football players with the opportunity to showcase their talents internationally by recommending their talents to football agent's and scouts across Europe, Asia, South America and Africa. I think it shouldn't be something too long.</p>
+                                  <p>To provide local football players with the opportunity to showcase their talents internationally by recommending their talents to football agent's and scouts across Europe, Asia, South America and Africa.</p>
                               </div>
                               <div class="col-lg-6">
                                   <h5>Our Vision</h5>
-                                  <p>To create an enabling environment for the local football players to thrive through collaborative effort with football agencies. We're not establishing football club.</p>
+                                  <p>To create an enabling environment for the local football players to thrive through collaborative effort with football agencies.</p>
                               </div>
                           </div>
                       </div>
