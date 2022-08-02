@@ -651,6 +651,52 @@
             </div>
           <!-- End White Section -->
 
+          <div class="container padding-top">
+                   <div class="black-section paddings">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="item-feature dark">
+                                 
+                                    <h3 class="text-muted">STEP 1</h3>
+                                    <h4 class="text-white">Registration</h4>
+                                    <p>Supply your fullname, phone and valid email address.</p>
+                                
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="item-feature dark">
+                                   
+                                    <h3 class="text-muted">STEP 2</h3>
+                                    <h4 class="text-white">Emai Verification</h4>
+                                    <p>An Password will be generated and sent to your email. Make sure to submit a valid email address.</p>
+                                  
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="item-feature dark">
+                                    
+                                    <h3 class="text-muted">STEP 3</h3>
+                                    <h4 class="text-white">Upload Video</h4>
+                                    <p>Video must not be more than 1min long and must not exceed 5MB in size</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="item-feature dark">
+                                   
+                                    <h3 class="text-muted">STEP 4</h3>
+                                    <h4 class="text-white">Proceed to Payment</h4>
+                                    <p>Make payment of registration fee. A receipt and Transaction code will be generate and sent to your email.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
           <!-- Parallax Section - Testimonials -->
           <div class="parallax-section parallax-total" style="background:url(img/slide/2.jpg);">
               <div class="container">

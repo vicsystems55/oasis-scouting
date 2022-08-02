@@ -80,7 +80,8 @@
 
                                                 <div class="form-group d-flex justify-content-center">
 
-
+                                                <h6 class="text-danger text-center font-weigh-bold">Note: Video must be less than 5MB and just 1 min long</h6>
+                                                      
                                                       <button v-if="loading2"  class="btn btn-primary" disabled>
                                                         Uploading video please wait...
                                                     </button>

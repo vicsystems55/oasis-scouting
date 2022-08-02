@@ -31,7 +31,7 @@
 
                                         <div class="form-group ">
 
-                                                <button v-if="loader"  class="btn btn-primary float-right" disabled> Signing in... </button>
+                                                <button v-if="loader"  class="btn btn-primary col-md-6 mx-auto" disabled> Signing in... </button>
                                             
                                                 <button  v-else @click="login()" class="btn btn-primary col-md-6 mx-auto"> Login </button>
                                             
