@@ -85,7 +85,7 @@
                                                         Uploading video please wait...
                                                     </button>
 
-                                                    <button v-else onclick="document.getElementById('customFile2').click()"  class="btn btn-primary">
+                                                    <button v-else onclick="document.getElementById('customFile2').click()"  class="btn btn-primary d-none">
                                                         Upload Video
                                                     </button>
 
@@ -234,7 +234,7 @@
                                             <button  class="btn btn-primary" disabled>Processing...</button>
                                         </div>
                                         <div v-else class="form-group d-flex justify-content-center">
-                                            <button @click="updateProfile()" class="btn btn-primary">Proceed to Payment of N 5,000</button>
+                                            <button @click="updateProfile()" class="btn btn-primary">Proceed to Payment of N 5,500</button>
                                         </div>
 
 
@@ -468,6 +468,16 @@ export default {
 
                if(event.target.files.length > 0){
                 var src2 = URL.createObjectURL(event.target.files[0]);
+
+                    if(event.target.files[0].size > 5200000){
+
+                        return  toast.error('Video size limit exceed');
+
+                    }
+
+
+
+
                 var preview2 = document.getElementById("previewImg2");
                 preview2.src = src2;
                 // preview.style.display = "block";
@@ -502,6 +512,17 @@ export default {
                                 })
                                 .then( (response) =>{
                                     //handle success
+
+                                    if (response.data.video) {
+
+                                        response.data.video.forEach(element => {
+                                             toast.error(element);
+                                        });
+
+
+                     
+                                       
+                                    }
                                 
 
                                         

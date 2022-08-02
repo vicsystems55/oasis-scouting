@@ -50,7 +50,7 @@
                                             <div class="offset-sm-2 col-sm-10">
                                                     <paystack
                                                         buttonClass="'button-class btn btn-primary btn-block col-md-12'"
-                                                        buttonText="Proceed to Pay  N 5,000.00"
+                                                        buttonText="Proceed to Pay  N 5,500.00"
                                                         :publicKey="publicKey"
                                                         :email="email"
                                                         :amount="amount"
