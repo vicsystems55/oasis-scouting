@@ -633,7 +633,7 @@
                           <span>Company Value</span>
                               Who Are You
                           </h4>
-                          <p>To have a positive impact on the community and develop better people through football. We want to create a lasting legacy for anyone who comes into contact with our club and for them to develop a lifelong association whether as players, coaches, officials or supporters.</p>
+                          <p>Oasis football scouting has made scouting much easier for both players and clubs, as, players and club agents no longer need to go through the rigorous process of traveling from one location to another to attend scouting trials. That is to say location or distance is no longer a barrier. You can scout or be scouted from the comfort of your home, at work, at school,farm or anywhere.</p>
 
                           <div class="row">
                               <div class="col-lg-6">
